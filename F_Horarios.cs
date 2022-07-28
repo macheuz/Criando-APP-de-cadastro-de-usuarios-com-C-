@@ -80,6 +80,8 @@ namespace banco_de_dados
                         T_DSCHORARIO as 'Horario'
                 FROM tb_horarios
                 ORDER BY T_DSCHORARIO
+
+
             ";
             //fazendo a conexao com o banco passando a query acima para preencher o data view
             dgv_horarios.DataSource = Banco.dql(vquery);
