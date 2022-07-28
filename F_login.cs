@@ -31,7 +31,7 @@ namespace banco_de_dados
                 return;
             }
             string sql = "SELECT * FROM tb_usuarios WHERE T_USERNAME='"+username+"'AND T_SENHAUSUARIO+'"+senha+"'";
-            dt=Banco.consulta(sql);
+            dt=Banco.dql(sql);
             if(dt.Rows.Count == 1)
             {
                 form1.lb_acesso.Text = dt.Rows[0].ItemArray[5].ToString();
@@ -50,6 +50,11 @@ namespace banco_de_dados
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void F_login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,6 +13,66 @@ namespace banco_de_dados
     {
         //criando variavel de conexao ao banco de dados
         private static SQLiteConnection conexao;
+
+        //funcoes genericas
+        public static DataTable dql(string sql) //Data Query Language
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                //para cada metodo vamos criar uma conexao propria
+                var vcon = ConexaoBanco();
+                //criando rotina
+                var cmd = vcon.CreateCommand();
+                //criando comando sql para pegar todos os usuarios
+                cmd.CommandText = sql;
+                //fazendo a consulta no banco passando o comando sql e a conexao no banco
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                //preenchendo o datatable com as informacoes
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void dml(string q, string msgOk = null, string msgERRO = null) //data Manipulation Language (Insert, Delete, Update)
+        {
+            //data adapter que fara nossa consulta no banco
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                //criando rotina
+                var cmd = vcon.CreateCommand();
+                //criando comando sql para pegar todos os usuarios
+                cmd.CommandText = q;
+                //fazendo a consulta no banco passando o comando sql e a conexao no banco
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+                if(msgOk != null)
+                {
+                    MessageBox.Show(msgOk);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                if(msgERRO != null)
+                {
+                    MessageBox.Show(msgERRO + "\n" + ex.Message);
+                }
+                throw ex;
+            }
+        }
+
         //criando metodo para realizar a conexao com o banco
         //é estatico pois utilizaremos a partir de qualquer lugar do programa
         private static SQLiteConnection ConexaoBanco()
@@ -49,31 +109,7 @@ namespace banco_de_dados
             }
         }
         //Criando método genérico para consulta
-        public static DataTable consulta(string sql)
-        {
-            SQLiteDataAdapter da = null;
-            DataTable dt = new DataTable();
-            try
-            {
-                //para cada metodo vamos criar uma conexao propria
-                var vcon = ConexaoBanco();
-                //criando rotina
-                var cmd = vcon.CreateCommand();
-                //criando comando sql para pegar todos os usuarios
-                cmd.CommandText = sql;
-                //fazendo a consulta no banco passando o comando sql e a conexao no banco
-                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
-                //preenchendo o datatable com as informacoes
-                da.Fill(dt);
-                vcon.Close();
-                return dt;
-                
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+       
 
         //Funcoes do form F_gestao usuarios
 
