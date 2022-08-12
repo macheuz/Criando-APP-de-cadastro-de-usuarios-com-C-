@@ -42,10 +42,11 @@
             this.novoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manutençaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bancoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGOFFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.horariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestãoDeProfessoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ledlogado)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -166,7 +167,8 @@
             // 
             this.manutençaoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bancoDeDadosToolStripMenuItem,
-            this.horariosToolStripMenuItem});
+            this.horariosToolStripMenuItem,
+            this.gestãoDeProfessoresToolStripMenuItem});
             this.manutençaoToolStripMenuItem.Name = "manutençaoToolStripMenuItem";
             this.manutençaoToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.manutençaoToolStripMenuItem.Text = "Manutençao";
@@ -174,9 +176,16 @@
             // bancoDeDadosToolStripMenuItem
             // 
             this.bancoDeDadosToolStripMenuItem.Name = "bancoDeDadosToolStripMenuItem";
-            this.bancoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bancoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.bancoDeDadosToolStripMenuItem.Text = "Banco de dados";
             this.bancoDeDadosToolStripMenuItem.Click += new System.EventHandler(this.bancoDeDadosToolStripMenuItem_Click);
+            // 
+            // horariosToolStripMenuItem
+            // 
+            this.horariosToolStripMenuItem.Name = "horariosToolStripMenuItem";
+            this.horariosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.horariosToolStripMenuItem.Text = "Horarios";
+            this.horariosToolStripMenuItem.Click += new System.EventHandler(this.horariosToolStripMenuItem_Click);
             // 
             // lOGINToolStripMenuItem
             // 
@@ -201,12 +210,12 @@
             this.lOGOFFToolStripMenuItem.Text = "LOGOFF";
             this.lOGOFFToolStripMenuItem.Click += new System.EventHandler(this.lOGOFFToolStripMenuItem_Click);
             // 
-            // horariosToolStripMenuItem
+            // gestãoDeProfessoresToolStripMenuItem
             // 
-            this.horariosToolStripMenuItem.Name = "horariosToolStripMenuItem";
-            this.horariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.horariosToolStripMenuItem.Text = "Horarios";
-            this.horariosToolStripMenuItem.Click += new System.EventHandler(this.horariosToolStripMenuItem_Click);
+            this.gestãoDeProfessoresToolStripMenuItem.Name = "gestãoDeProfessoresToolStripMenuItem";
+            this.gestãoDeProfessoresToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.gestãoDeProfessoresToolStripMenuItem.Text = "Gestão de Professores";
+            this.gestãoDeProfessoresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProfessoresToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -249,6 +258,7 @@
         private System.Windows.Forms.ToolStripMenuItem manutençaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bancoDeDadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem horariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestãoDeProfessoresToolStripMenuItem;
     }
 }
 

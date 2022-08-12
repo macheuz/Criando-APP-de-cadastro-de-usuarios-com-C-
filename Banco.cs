@@ -78,7 +78,7 @@ namespace banco_de_dados
         private static SQLiteConnection ConexaoBanco()
         {  
             //criando uma nova conexao ao banco de dados
-            conexao = new SQLiteConnection(@"Data Source = C:\Users\Matheus\Desktop\Projetos Windows Form\Aula 60\Banco de dados\banco de dados\banco\banco_academia.db");
+            conexao = new SQLiteConnection(@"Data Source = C:\Users\macha\Desktop\Projetos Windows Form\Aula 60\Banco de dados\banco de dados\banco\banco_academia.db");
             // abrindo a conexao com o banco
             conexao.Open();
             return conexao;
