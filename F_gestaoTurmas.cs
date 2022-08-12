@@ -28,7 +28,7 @@ namespace banco_de_dados
             ";
             dgv_turmas.DataSource = Banco.dql(vqueryDGV);
             dgv_turmas.Columns[0].Width = 40;
-            dgv_turmas.Columns[1].Width = 120;
+            dgv_turmas.Columns[1].Width = 130;
             dgv_turmas.Columns[2].Width = 85;
         }
     }
