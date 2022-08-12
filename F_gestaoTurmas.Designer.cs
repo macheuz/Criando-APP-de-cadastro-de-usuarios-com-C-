@@ -39,11 +39,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cb_horario = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_novaTurma = new System.Windows.Forms.Button();
-            this.btn_salvarEdicoes = new System.Windows.Forms.Button();
-            this.btn_excluirTurma = new System.Windows.Forms.Button();
-            this.btn_imprimirTurma = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
+            this.btn_imprimirTurma = new System.Windows.Forms.Button();
+            this.btn_excluirTurma = new System.Windows.Forms.Button();
+            this.btn_salvarEdicoes = new System.Windows.Forms.Button();
+            this.btn_novaTurma = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_turmas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_maxAlunos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -150,32 +150,14 @@
             this.panel1.Size = new System.Drawing.Size(749, 29);
             this.panel1.TabIndex = 19;
             // 
-            // btn_novaTurma
+            // btn_fechar
             // 
-            this.btn_novaTurma.Location = new System.Drawing.Point(0, 4);
-            this.btn_novaTurma.Name = "btn_novaTurma";
-            this.btn_novaTurma.Size = new System.Drawing.Size(144, 23);
-            this.btn_novaTurma.TabIndex = 0;
-            this.btn_novaTurma.Text = "Nova Turma";
-            this.btn_novaTurma.UseVisualStyleBackColor = true;
-            // 
-            // btn_salvarEdicoes
-            // 
-            this.btn_salvarEdicoes.Location = new System.Drawing.Point(150, 3);
-            this.btn_salvarEdicoes.Name = "btn_salvarEdicoes";
-            this.btn_salvarEdicoes.Size = new System.Drawing.Size(144, 23);
-            this.btn_salvarEdicoes.TabIndex = 1;
-            this.btn_salvarEdicoes.Text = "Salvar Edições";
-            this.btn_salvarEdicoes.UseVisualStyleBackColor = true;
-            // 
-            // btn_excluirTurma
-            // 
-            this.btn_excluirTurma.Location = new System.Drawing.Point(300, 3);
-            this.btn_excluirTurma.Name = "btn_excluirTurma";
-            this.btn_excluirTurma.Size = new System.Drawing.Size(144, 23);
-            this.btn_excluirTurma.TabIndex = 2;
-            this.btn_excluirTurma.Text = "Excluir Turma";
-            this.btn_excluirTurma.UseVisualStyleBackColor = true;
+            this.btn_fechar.Location = new System.Drawing.Point(600, 3);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(146, 23);
+            this.btn_fechar.TabIndex = 4;
+            this.btn_fechar.Text = "Fechar";
+            this.btn_fechar.UseVisualStyleBackColor = true;
             // 
             // btn_imprimirTurma
             // 
@@ -186,14 +168,32 @@
             this.btn_imprimirTurma.Text = "Imprimir Turma";
             this.btn_imprimirTurma.UseVisualStyleBackColor = true;
             // 
-            // btn_fechar
+            // btn_excluirTurma
             // 
-            this.btn_fechar.Location = new System.Drawing.Point(600, 3);
-            this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(146, 23);
-            this.btn_fechar.TabIndex = 4;
-            this.btn_fechar.Text = "Fechar";
-            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_excluirTurma.Location = new System.Drawing.Point(300, 3);
+            this.btn_excluirTurma.Name = "btn_excluirTurma";
+            this.btn_excluirTurma.Size = new System.Drawing.Size(144, 23);
+            this.btn_excluirTurma.TabIndex = 2;
+            this.btn_excluirTurma.Text = "Excluir Turma";
+            this.btn_excluirTurma.UseVisualStyleBackColor = true;
+            // 
+            // btn_salvarEdicoes
+            // 
+            this.btn_salvarEdicoes.Location = new System.Drawing.Point(150, 3);
+            this.btn_salvarEdicoes.Name = "btn_salvarEdicoes";
+            this.btn_salvarEdicoes.Size = new System.Drawing.Size(144, 23);
+            this.btn_salvarEdicoes.TabIndex = 1;
+            this.btn_salvarEdicoes.Text = "Salvar Edições";
+            this.btn_salvarEdicoes.UseVisualStyleBackColor = true;
+            // 
+            // btn_novaTurma
+            // 
+            this.btn_novaTurma.Location = new System.Drawing.Point(0, 4);
+            this.btn_novaTurma.Name = "btn_novaTurma";
+            this.btn_novaTurma.Size = new System.Drawing.Size(144, 23);
+            this.btn_novaTurma.TabIndex = 0;
+            this.btn_novaTurma.Text = "Nova Turma";
+            this.btn_novaTurma.UseVisualStyleBackColor = true;
             // 
             // F_gestaoTurmas
             // 
@@ -215,6 +215,7 @@
             this.Name = "F_gestaoTurmas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestão de turmas";
+            this.Load += new System.EventHandler(this.F_gestaoTurmas_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_turmas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_maxAlunos)).EndInit();
             this.panel1.ResumeLayout(false);

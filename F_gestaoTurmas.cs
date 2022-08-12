@@ -19,6 +19,11 @@ namespace banco_de_dados
 
         private void F_gestaoTurmas_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void F_gestaoTurmas_Load_1(object sender, EventArgs e)
+        {
             string vqueryDGV = @"
             SELECT  tbt.N_IDTURMA as 'ID',
                     tbt.T_DSCTURMA as 'Turma',
