@@ -1,6 +1,6 @@
 ﻿namespace banco_de_dados
 {
-    partial class Form1
+    partial class Academia
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -217,7 +217,7 @@
             this.gestãoDeProfessoresToolStripMenuItem.Text = "Gestão de Professores";
             this.gestãoDeProfessoresToolStripMenuItem.Click += new System.EventHandler(this.gestãoDeProfessoresToolStripMenuItem_Click);
             // 
-            // Form1
+            // Academia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -225,7 +225,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "Academia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Academia - 1.0";
             this.panel1.ResumeLayout(false);

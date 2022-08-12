@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace banco_de_dados
 {
-    public partial class Form1 : Form
+    public partial class Academia : Form
     {
-        public Form1()
+        public Academia()
         {
             InitializeComponent();
             F_login f_Login = new F_login(this);

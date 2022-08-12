@@ -12,9 +12,9 @@ namespace banco_de_dados
 {
     public partial class F_login : Form
     {
-        Form1 form1;
+        Academia form1;
         DataTable dt = new DataTable();
-        public F_login(Form1 f)
+        public F_login(Academia f)
         {
             InitializeComponent();
             form1 = f;
