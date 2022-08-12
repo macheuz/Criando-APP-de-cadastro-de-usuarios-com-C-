@@ -193,21 +193,21 @@
             this.lOGONToolStripMenuItem,
             this.lOGOFFToolStripMenuItem});
             this.lOGINToolStripMenuItem.Name = "lOGINToolStripMenuItem";
-            this.lOGINToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.lOGINToolStripMenuItem.Text = "lOGIN";
+            this.lOGINToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.lOGINToolStripMenuItem.Text = "Login";
             // 
             // lOGONToolStripMenuItem
             // 
             this.lOGONToolStripMenuItem.Name = "lOGONToolStripMenuItem";
-            this.lOGONToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.lOGONToolStripMenuItem.Text = "LOGON";
+            this.lOGONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lOGONToolStripMenuItem.Text = "LogOn";
             this.lOGONToolStripMenuItem.Click += new System.EventHandler(this.lOGONToolStripMenuItem_Click);
             // 
             // lOGOFFToolStripMenuItem
             // 
             this.lOGOFFToolStripMenuItem.Name = "lOGOFFToolStripMenuItem";
-            this.lOGOFFToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.lOGOFFToolStripMenuItem.Text = "LOGOFF";
+            this.lOGOFFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lOGOFFToolStripMenuItem.Text = "LogOff";
             this.lOGOFFToolStripMenuItem.Click += new System.EventHandler(this.lOGOFFToolStripMenuItem_Click);
             // 
             // gestãoDeProfessoresToolStripMenuItem
