@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_turmas = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.n_maxAlunos = new System.Windows.Forms.NumericUpDown();
@@ -46,6 +46,8 @@
             this.cb_horario = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tb_dscTurma = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tb_vagas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_turmas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n_maxAlunos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -55,14 +57,14 @@
             // 
             this.dgv_turmas.AllowUserToAddRows = false;
             this.dgv_turmas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_turmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_turmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_turmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_turmas.EnableHeadersVisualStyles = false;
             this.dgv_turmas.Location = new System.Drawing.Point(12, 12);
@@ -224,11 +226,32 @@
             this.tb_dscTurma.TabIndex = 1;
             this.tb_dscTurma.TextChanged += new System.EventHandler(this.tb_dscTurma_TextChanged);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(502, 205);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Vagas";
+            // 
+            // tb_vagas
+            // 
+            this.tb_vagas.Cursor = System.Windows.Forms.Cursors.No;
+            this.tb_vagas.Location = new System.Drawing.Point(502, 221);
+            this.tb_vagas.Name = "tb_vagas";
+            this.tb_vagas.ReadOnly = true;
+            this.tb_vagas.Size = new System.Drawing.Size(105, 20);
+            this.tb_vagas.TabIndex = 23;
+            this.tb_vagas.TabStop = false;
+            // 
             // F_gestaoTurmas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(749, 450);
+            this.Controls.Add(this.tb_vagas);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_dscTurma);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cb_professor);
@@ -274,5 +297,7 @@
         private System.Windows.Forms.ComboBox cb_horario;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_dscTurma;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tb_vagas;
     }
 }
