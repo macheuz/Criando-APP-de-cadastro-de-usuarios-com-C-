@@ -1,8 +1,11 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -149,7 +152,7 @@ namespace banco_de_dados
                 {
                     dgv_turmas[1, linha].Value = tb_dscTurma.Text;
                     dgv_turmas[2, linha].Value = cb_horario.Text;
-                    tb_vagas.Text = calcvagas();
+                    tb_vagas.Text = calcvagas(); 
                 }
                 else if (modo == 2)
                 {
@@ -214,6 +217,41 @@ namespace banco_de_dados
             {
                 modo = 1;
             }
+        }
+
+        private void btn_imprimirTurma_Click(object sender, EventArgs e)
+        {
+            string nomeArquivo = Globais.caminho + @"\turmas.pdf";
+            FileStream arquivoPDF = new FileStream(nomeArquivo, FileMode.Create);
+            Document doc = new Document(PageSize.A4);
+            PdfWriter escritorPDF = PdfWriter.GetInstance(doc, arquivoPDF);
+
+            string dados = "";
+            //criando elemento paragrafo com as configuracoes padroes de fonte
+            Paragraph Paragrafo1 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
+            Paragrafo1.Alignment = Element.ALIGN_CENTER;
+            Paragrafo1.Add("CFB Cursos \n");
+            Paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Italic);
+            Paragrafo1.Add("Curso de C#");
+            string texto1 = "youtube.com";
+            Paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Italic);
+            Paragrafo1.Add(texto1 + "\n");
+
+            Paragraph Paragrafo2 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
+            Paragrafo2.Alignment = Element.ALIGN_CENTER;
+            Paragrafo2.Add("CFB Cursos \n");
+            Paragrafo2.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Italic);
+            Paragrafo2.Add("Curso de C#");
+            string texto2 = "youtube.com";
+            Paragrafo2.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Italic);
+            Paragrafo2.Add(texto2 + "\n");
+
+
+            doc.Open();
+            doc.Add(Paragrafo1);
+            doc.Add(Paragrafo2);
+            doc.Close();
+
         }
     }
 }

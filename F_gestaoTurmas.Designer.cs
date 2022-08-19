@@ -160,6 +160,7 @@
             this.btn_imprimirTurma.TabIndex = 9;
             this.btn_imprimirTurma.Text = "Imprimir Turma";
             this.btn_imprimirTurma.UseVisualStyleBackColor = true;
+            this.btn_imprimirTurma.Click += new System.EventHandler(this.btn_imprimirTurma_Click);
             // 
             // btn_excluirTurma
             // 
