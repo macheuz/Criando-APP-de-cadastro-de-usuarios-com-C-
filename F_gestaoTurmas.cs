@@ -238,18 +238,46 @@ namespace banco_de_dados
             Paragrafo1.Add(texto1 + "\n");
 
             Paragraph Paragrafo2 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
-            Paragrafo2.Alignment = Element.ALIGN_CENTER;
-            Paragrafo2.Add("CFB Cursos \n");
-            Paragrafo2.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Italic);
-            Paragrafo2.Add("Curso de C#");
-            string texto2 = "youtube.com";
-            Paragrafo2.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Italic);
+            Paragrafo2.Alignment = Element.ALIGN_LEFT;
+            string texto2 = "Esse é o texto do segundo paragrafo";
             Paragrafo2.Add(texto2 + "\n");
+
+            //criando tabela 
+
+            PdfPTable tabela = new PdfPTable(3); //3 colunas
+            tabela.DefaultCell.FixedHeight = 20;
+
+            PdfPCell celula = new PdfPCell(new Phrase("Tabela de Preços"));
+            celula.Colspan = 3; //linha 1 mesclada
+            celula.Rotation = 90;
+            tabela.AddCell(celula);
+
+            tabela.AddCell("Codigo");
+            tabela.AddCell("Produto");
+            tabela.AddCell("Preço");
+
+            tabela.AddCell("01");
+            tabela.AddCell("Mouse");
+            tabela.AddCell("25");
+
+            tabela.AddCell("02");
+            tabela.AddCell("Teclado");
+            tabela.AddCell("65");
+
+
+            celula.Phrase.Add("Tabela de preços");
+            celula.Rotation = 0;
+            celula.Colspan = 3;
+            celula.FixedHeight = 35;
+            celula.HorizontalAlignment = Element.ALIGN_CENTER;
+            celula.VerticalAlignment = Element.ALIGN_MIDDLE;
+            tabela.AddCell(celula);
 
 
             doc.Open();
             doc.Add(Paragrafo1);
             doc.Add(Paragrafo2);
+            doc.Add(tabela);
             doc.Close();
 
         }
