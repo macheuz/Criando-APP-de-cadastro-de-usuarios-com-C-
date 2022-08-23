@@ -230,12 +230,8 @@ namespace banco_de_dados
             //criando elemento paragrafo com as configuracoes padroes de fonte
             Paragraph Paragrafo1 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
             Paragrafo1.Alignment = Element.ALIGN_CENTER;
-            Paragrafo1.Add("CFB Cursos \n");
-            Paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Italic);
-            Paragrafo1.Add("Curso de C#");
-            string texto1 = "youtube.com";
-            Paragrafo1.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Italic);
-            Paragrafo1.Add(texto1 + "\n");
+            Paragrafo1.Add("Relatorio de turmas \n \n");
+            
 
             Paragraph Paragrafo2 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
             Paragrafo2.Alignment = Element.ALIGN_LEFT;
@@ -247,39 +243,30 @@ namespace banco_de_dados
             PdfPTable tabela = new PdfPTable(3); //3 colunas
             tabela.DefaultCell.FixedHeight = 20;
 
-            PdfPCell celula = new PdfPCell(new Phrase("Tabela de Preços"));
-            celula.Colspan = 3; //linha 1 mesclada
-            celula.Rotation = 90;
-            tabela.AddCell(celula);
 
-            tabela.AddCell("Codigo");
-            tabela.AddCell("Produto");
-            tabela.AddCell("Preço");
+            tabela.AddCell("ID turma");
+            tabela.AddCell("Turma");
+            tabela.AddCell("Horario");
 
-            tabela.AddCell("01");
-            tabela.AddCell("Mouse");
-            tabela.AddCell("25");
-
-            tabela.AddCell("02");
-            tabela.AddCell("Teclado");
-            tabela.AddCell("65");
-
-
-            celula.Phrase.Add("Tabela de preços");
-            celula.Rotation = 0;
-            celula.Colspan = 3;
-            celula.FixedHeight = 35;
-            celula.HorizontalAlignment = Element.ALIGN_CENTER;
-            celula.VerticalAlignment = Element.ALIGN_MIDDLE;
-            tabela.AddCell(celula);
+            DataTable dtTurmas = Banco.dql(vqueryDGV);
+            for(int i=0; i<dtTurmas.Rows.Count; i++)
+            {
+                tabela.AddCell(dtTurmas.Rows[i].Field<Int64>("ID").ToString());
+                tabela.AddCell(dtTurmas.Rows[i].Field<string>("Turma"));
+                tabela.AddCell(dtTurmas.Rows[i].Field<string>("Horario"));
+            }
 
 
             doc.Open();
             doc.Add(Paragrafo1);
-            doc.Add(Paragrafo2);
             doc.Add(tabela);
             doc.Close();
 
+            DialogResult res = MessageBox.Show("Deseja abrir o relatorio?", "Relatorio", MessageBoxButtons.YesNo);
+            if(res == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start(Globais.caminho + @"\turmas.pdf");
+            }
         }
     }
 }
