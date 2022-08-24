@@ -72,7 +72,8 @@ namespace banco_de_dados
 
         private void novoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //abreForm();
+            F_novoAluno f_NovoAluno = new F_novoAluno();
+            abreForm(1, f_NovoAluno);
         }
 
         private void horariosToolStripMenuItem_Click(object sender, EventArgs e)
