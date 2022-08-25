@@ -61,7 +61,7 @@ namespace banco_de_dados
             INSERT INTO tb_alunos
             (T_NOMEALUNO, T_TELEFONE, T_STATUS, N_IDTURMA)
             VALUES('{0}','{1}','{2}',{3})
-            ", tb_nome.Text, mtb_telefone.Text, cb_status.SelectedValue, tb_turma.Tag.ToString());
+            ", tb_nome.Text, mtb_telefone.Text, cb_status.SelectedValue , tb_turma.Tag.ToString());
             Banco.dml(queryInsertAluno);
             MessageBox.Show("Novo aluno Inserido");
 
@@ -79,6 +79,12 @@ namespace banco_de_dados
         private void button4_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            F_selecionarTurma f_SelecionarTurma = new F_selecionarTurma(this);
+            f_SelecionarTurma.ShowDialog();
         }
     }
 }

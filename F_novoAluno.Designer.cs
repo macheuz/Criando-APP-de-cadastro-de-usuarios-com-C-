@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_novo = new System.Windows.Forms.Button();
-            this.btn_gravar = new System.Windows.Forms.Button();
-            this.btn_cancelar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_gravar = new System.Windows.Forms.Button();
+            this.btn_novo = new System.Windows.Forms.Button();
             this.tb_nome = new System.Windows.Forms.TextBox();
             this.mtb_telefone = new System.Windows.Forms.MaskedTextBox();
             this.cb_status = new System.Windows.Forms.ComboBox();
@@ -60,26 +60,15 @@
             this.panel1.Size = new System.Drawing.Size(513, 29);
             this.panel1.TabIndex = 0;
             // 
-            // btn_novo
+            // button4
             // 
-            this.btn_novo.Location = new System.Drawing.Point(12, 3);
-            this.btn_novo.Name = "btn_novo";
-            this.btn_novo.Size = new System.Drawing.Size(120, 23);
-            this.btn_novo.TabIndex = 0;
-            this.btn_novo.Text = "Novo";
-            this.btn_novo.UseVisualStyleBackColor = true;
-            this.btn_novo.Click += new System.EventHandler(this.btn_novo_Click);
-            // 
-            // btn_gravar
-            // 
-            this.btn_gravar.Enabled = false;
-            this.btn_gravar.Location = new System.Drawing.Point(138, 3);
-            this.btn_gravar.Name = "btn_gravar";
-            this.btn_gravar.Size = new System.Drawing.Size(120, 23);
-            this.btn_gravar.TabIndex = 1;
-            this.btn_gravar.Text = "Gravar";
-            this.btn_gravar.UseVisualStyleBackColor = true;
-            this.btn_gravar.Click += new System.EventHandler(this.btn_gravar_Click);
+            this.button4.Location = new System.Drawing.Point(390, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(120, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Fechar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btn_cancelar
             // 
@@ -92,15 +81,26 @@
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
-            // button4
+            // btn_gravar
             // 
-            this.button4.Location = new System.Drawing.Point(390, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Fechar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btn_gravar.Enabled = false;
+            this.btn_gravar.Location = new System.Drawing.Point(138, 3);
+            this.btn_gravar.Name = "btn_gravar";
+            this.btn_gravar.Size = new System.Drawing.Size(120, 23);
+            this.btn_gravar.TabIndex = 1;
+            this.btn_gravar.Text = "Gravar";
+            this.btn_gravar.UseVisualStyleBackColor = true;
+            this.btn_gravar.Click += new System.EventHandler(this.btn_gravar_Click);
+            // 
+            // btn_novo
+            // 
+            this.btn_novo.Location = new System.Drawing.Point(12, 3);
+            this.btn_novo.Name = "btn_novo";
+            this.btn_novo.Size = new System.Drawing.Size(120, 23);
+            this.btn_novo.TabIndex = 0;
+            this.btn_novo.Text = "Novo";
+            this.btn_novo.UseVisualStyleBackColor = true;
+            this.btn_novo.Click += new System.EventHandler(this.btn_novo_Click);
             // 
             // tb_nome
             // 
@@ -181,6 +181,7 @@
             this.button5.TabIndex = 9;
             this.button5.Text = "...";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -248,11 +249,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tb_turma;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_plano;
+        public System.Windows.Forms.TextBox tb_turma;
     }
 }
