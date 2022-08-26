@@ -55,6 +55,7 @@
             this.dgv_turmas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_turmas.Size = new System.Drawing.Size(776, 403);
             this.dgv_turmas.TabIndex = 7;
+            this.dgv_turmas.DoubleClick += new System.EventHandler(this.dgv_turmas_DoubleClick);
             // 
             // F_selecionarTurma
             // 
