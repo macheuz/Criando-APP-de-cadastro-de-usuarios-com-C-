@@ -93,6 +93,12 @@ namespace banco_de_dados
             F_gestaoTurmas f_GestaoTurmas = new F_gestaoTurmas();
             abreForm(2, f_GestaoTurmas);
         }
+
+        private void gestãoDeAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_gestaoAlunos f_GestaoAlunos = new F_gestaoAlunos();
+            abreForm(2, f_GestaoAlunos);
+        }
     }
     }
     
