@@ -41,10 +41,10 @@
             this.btn_imprimir = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_salvar = new System.Windows.Forms.Button();
-            this.btn_excluir = new System.Windows.Forms.Button();
-            this.btn_financeiro = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
+            this.btn_financeiro = new System.Windows.Forms.Button();
+            this.btn_excluir = new System.Windows.Forms.Button();
+            this.btn_salvar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_alunos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,6 +73,7 @@
             this.dgv_alunos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_alunos.Size = new System.Drawing.Size(355, 403);
             this.dgv_alunos.TabIndex = 8;
+            this.dgv_alunos.SelectionChanged += new System.EventHandler(this.dgv_alunos_SelectionChanged);
             // 
             // tb_nome
             // 
@@ -171,23 +172,15 @@
             this.panel1.Size = new System.Drawing.Size(672, 54);
             this.panel1.TabIndex = 20;
             // 
-            // btn_salvar
+            // btn_fechar
             // 
-            this.btn_salvar.Location = new System.Drawing.Point(12, 15);
-            this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(158, 25);
-            this.btn_salvar.TabIndex = 0;
-            this.btn_salvar.Text = "Salvar Edições";
-            this.btn_salvar.UseVisualStyleBackColor = true;
-            // 
-            // btn_excluir
-            // 
-            this.btn_excluir.Location = new System.Drawing.Point(176, 15);
-            this.btn_excluir.Name = "btn_excluir";
-            this.btn_excluir.Size = new System.Drawing.Size(158, 25);
-            this.btn_excluir.TabIndex = 1;
-            this.btn_excluir.Text = "Excluir Aluno";
-            this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_fechar.Location = new System.Drawing.Point(504, 15);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(158, 25);
+            this.btn_fechar.TabIndex = 3;
+            this.btn_fechar.Text = "Fechar";
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // btn_financeiro
             // 
@@ -198,14 +191,25 @@
             this.btn_financeiro.Text = "Financeiro";
             this.btn_financeiro.UseVisualStyleBackColor = true;
             // 
-            // btn_fechar
+            // btn_excluir
             // 
-            this.btn_fechar.Location = new System.Drawing.Point(504, 15);
-            this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(158, 25);
-            this.btn_fechar.TabIndex = 3;
-            this.btn_fechar.Text = "Fechar";
-            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_excluir.Location = new System.Drawing.Point(176, 15);
+            this.btn_excluir.Name = "btn_excluir";
+            this.btn_excluir.Size = new System.Drawing.Size(158, 25);
+            this.btn_excluir.TabIndex = 1;
+            this.btn_excluir.Text = "Excluir Aluno";
+            this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
+            // 
+            // btn_salvar
+            // 
+            this.btn_salvar.Location = new System.Drawing.Point(12, 15);
+            this.btn_salvar.Name = "btn_salvar";
+            this.btn_salvar.Size = new System.Drawing.Size(158, 25);
+            this.btn_salvar.TabIndex = 0;
+            this.btn_salvar.Text = "Salvar Edições";
+            this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // pictureBox1
             // 
