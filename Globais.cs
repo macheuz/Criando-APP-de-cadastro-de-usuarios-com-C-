@@ -16,5 +16,6 @@ namespace banco_de_dados
         public static string nomeBanco = "banco_academia.db";
         //pegando o caminho do banco
         public static string caminhoBanco = caminho + @"\banco\";
+        public static string caminhoFotos = caminho + @"\Foto\";
     }
 }

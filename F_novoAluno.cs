@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace banco_de_dados
 {
@@ -84,6 +85,37 @@ namespace banco_de_dados
         {
             F_selecionarTurma f_SelecionarTurma = new F_selecionarTurma(this);
             f_SelecionarTurma.ShowDialog();
+        }
+
+        private void btn_addFoto_Click(object sender, EventArgs e)
+        {
+            string origemCompleto = "";
+            string foto = "";
+            string pastaDestino = Globais.caminhoFotos;
+            string destinoCompleto = "";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                origemCompleto = openFileDialog1.FileName;
+                foto = openFileDialog1.SafeFileName;
+                destinoCompleto = pastaDestino + foto;
+            }
+            if (File.Exists(destinoCompleto))
+            {
+                if(MessageBox.Show("Arquivo ja existe, deseja substituir?", "Substituir", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+                
+            }
+            System.IO.File.Copy(origemCompleto, destinoCompleto, true);
+            if (File.Exists(destinoCompleto))
+            {
+                pb_foto.ImageLocation = destinoCompleto;
+            }
+            else
+            {
+                MessageBox.Show("Arquivo não copiado");
+            }
         }
     }
 }

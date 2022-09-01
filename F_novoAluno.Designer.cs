@@ -45,7 +45,11 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tb_plano = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pb_foto = new System.Windows.Forms.PictureBox();
+            this.btn_addFoto = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_foto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,16 +59,16 @@
             this.panel1.Controls.Add(this.btn_gravar);
             this.panel1.Controls.Add(this.btn_novo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 316);
+            this.panel1.Location = new System.Drawing.Point(0, 228);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(513, 29);
+            this.panel1.Size = new System.Drawing.Size(620, 29);
             this.panel1.TabIndex = 0;
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(390, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 23);
+            this.button4.Size = new System.Drawing.Size(208, 23);
             this.button4.TabIndex = 3;
             this.button4.Text = "Fechar";
             this.button4.UseVisualStyleBackColor = true;
@@ -209,11 +213,38 @@
             this.tb_plano.Size = new System.Drawing.Size(215, 20);
             this.tb_plano.TabIndex = 10;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "JPG(*.jpg)|*.jpg|PNG(*.png)|*.png";
+            // 
+            // pb_foto
+            // 
+            this.pb_foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pb_foto.Location = new System.Drawing.Point(513, 31);
+            this.pb_foto.Name = "pb_foto";
+            this.pb_foto.Size = new System.Drawing.Size(85, 113);
+            this.pb_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_foto.TabIndex = 13;
+            this.pb_foto.TabStop = false;
+            // 
+            // btn_addFoto
+            // 
+            this.btn_addFoto.Location = new System.Drawing.Point(513, 150);
+            this.btn_addFoto.Name = "btn_addFoto";
+            this.btn_addFoto.Size = new System.Drawing.Size(85, 23);
+            this.btn_addFoto.TabIndex = 14;
+            this.btn_addFoto.Text = "Add Foto";
+            this.btn_addFoto.UseVisualStyleBackColor = true;
+            this.btn_addFoto.Click += new System.EventHandler(this.btn_addFoto_Click);
+            // 
             // F_novoAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 345);
+            this.ClientSize = new System.Drawing.Size(620, 257);
+            this.Controls.Add(this.btn_addFoto);
+            this.Controls.Add(this.pb_foto);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tb_plano);
@@ -228,9 +259,10 @@
             this.Controls.Add(this.tb_nome);
             this.Controls.Add(this.panel1);
             this.Name = "F_novoAluno";
-            this.Text = "F_novoAluno";
+            this.Text = "Novo Aluno";
             this.Load += new System.EventHandler(this.F_novoAluno_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_foto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +287,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_plano;
         public System.Windows.Forms.TextBox tb_turma;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox pb_foto;
+        private System.Windows.Forms.Button btn_addFoto;
     }
 }
