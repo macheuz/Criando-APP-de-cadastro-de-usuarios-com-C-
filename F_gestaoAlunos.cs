@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace banco_de_dados
 {
@@ -93,6 +95,10 @@ namespace banco_de_dados
         {
             if(MessageBox.Show("Confirma Exclusão?", "Excluir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                if (File.Exists(pb_foto.ImageLocation))
+                {
+                    File.Delete(pb_foto.ImageLocation);
+                }
                 string vqueryExcluirAluno = string.Format(@"
                 DELETE FROM tb_alunos
                 WHERE N_IDALUNO = {0}", idSelecionado);
@@ -112,12 +118,15 @@ namespace banco_de_dados
             if(dgv.SelectedRows.Count > 0)
             {
                 idSelecionado = dgv.Rows[dgv.SelectedRows[0].Index].Cells[0].Value.ToString();
+                tb_nome.Text = dgv_alunos.Rows[dgv.SelectedRows[0].Index].Cells[1].Value.ToString();
+                idSelecionado = dgv.Rows[dgv.SelectedRows[0].Index].Cells[0].Value.ToString();
                 string vqueryCampos = string.Format(@"
                 SELECT N_IDALUNO,
                 T_NOMEALUNO,
                 T_TELEFONE,
                 T_STATUS,
-                N_IDTURMA
+                N_IDTURMA,
+                T_FOTO
                 FROM tb_alunos
                 WHERE N_IDALUNO = {0}", idSelecionado);
                 DataTable dt = Banco.dql(vqueryCampos);
@@ -126,6 +135,7 @@ namespace banco_de_dados
                 cb_status.SelectedValue = dt.Rows[0].Field<string>("T_STATUS");
                 cb_turmas.SelectedValue = dt.Rows[0].Field<Int64>("N_IDTURMA");
                 turmaAtual = cb_turmas.Text;
+                pb_foto.ImageLocation = dt.Rows[0].Field<string>("T_FOTO");
             }
         }
     }

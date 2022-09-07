@@ -98,7 +98,7 @@ namespace banco_de_dados
                 cb_professor.SelectedValue = dt.Rows[0].Field<Int64>("N_IDPROFESSOR").ToString();
                 n_maxAlunos.Value = dt.Rows[0].Field<Int64>("N_MAXALUNOS");
                 cb_status.SelectedValue = dt.Rows[0].Field<string>("T_STATUS");
-                cb_horario.SelectedValue = dt.Rows[0].Field<Int64>("N_IDHORARIO").ToString();
+                cb_horario.SelectedValue = dt.Rows[0].Field<Int64>("N_IDHORARIO");
 
                 
                 tb_vagas.Text = calcvagas();
