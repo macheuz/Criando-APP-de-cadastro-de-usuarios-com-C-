@@ -27,5 +27,19 @@ namespace banco_de_dados
             usuario.nivel = Convert.ToInt32(Math.Round(n_nivel.Value,0));
             Banco.NovoUsuario(usuario);
         }
+
+        private void btn_fechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            tb_nome.Clear();
+            tb_username.Clear();
+            tb_senha.Clear();
+            cb_status.SelectedIndex = 0;
+            n_nivel.Value = 0;
+        }
     }
 }

@@ -42,10 +42,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_novo = new System.Windows.Forms.Button();
-            this.btn_salvar = new System.Windows.Forms.Button();
-            this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_salvar = new System.Windows.Forms.Button();
+            this.btn_novo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.n_nivel)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -179,6 +179,39 @@
             this.panel1.Size = new System.Drawing.Size(568, 30);
             this.panel1.TabIndex = 13;
             // 
+            // btn_fechar
+            // 
+            this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_fechar.Location = new System.Drawing.Point(444, 3);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(121, 23);
+            this.btn_fechar.TabIndex = 3;
+            this.btn_fechar.Text = "Fechar";
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelar.Location = new System.Drawing.Point(246, 3);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(192, 23);
+            this.btn_cancelar.TabIndex = 2;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // btn_salvar
+            // 
+            this.btn_salvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salvar.Location = new System.Drawing.Point(93, 3);
+            this.btn_salvar.Name = "btn_salvar";
+            this.btn_salvar.Size = new System.Drawing.Size(147, 23);
+            this.btn_salvar.TabIndex = 1;
+            this.btn_salvar.Text = "Salvar";
+            this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
+            // 
             // btn_novo
             // 
             this.btn_novo.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -188,37 +221,6 @@
             this.btn_novo.TabIndex = 0;
             this.btn_novo.Text = "Novo";
             this.btn_novo.UseVisualStyleBackColor = true;
-            // 
-            // btn_salvar
-            // 
-            this.btn_salvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_salvar.Location = new System.Drawing.Point(93, 3);
-            this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn_salvar.TabIndex = 1;
-            this.btn_salvar.Text = "Salvar";
-            this.btn_salvar.UseVisualStyleBackColor = true;
-            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancelar.Location = new System.Drawing.Point(174, 3);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancelar.TabIndex = 2;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
-            // 
-            // btn_fechar
-            // 
-            this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_fechar.Location = new System.Drawing.Point(490, 3);
-            this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(75, 23);
-            this.btn_fechar.TabIndex = 3;
-            this.btn_fechar.Text = "Fechar";
-            this.btn_fechar.UseVisualStyleBackColor = true;
             // 
             // F_NovoUsuario
             // 

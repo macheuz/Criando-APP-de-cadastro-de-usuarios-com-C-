@@ -77,5 +77,10 @@ namespace banco_de_dados
                 dgv_usuarios.Rows.Remove(dgv_usuarios.CurrentRow);
             }
         }
+
+        private void btn_fechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
