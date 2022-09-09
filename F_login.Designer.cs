@@ -107,7 +107,7 @@
             this.MinimizeBox = false;
             this.Name = "F_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "F_login";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.F_login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
